@@ -1,0 +1,62 @@
+.what {
+    margin-left: 100px;
+    width: 1900px; /* Adjusted width to 1000px */
+    height: 900px;
+    background-color: #fafafa;
+    padding: 30px;
+    text-align: start;
+    margin-top: 200px;
+  }
+  
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    color: #ff3147;
+  }
+  
+  .data {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px; /* Maximum width set to 1000px */
+  }
+  
+  .custom-carousel .carousel-indicators {
+    position: static;
+    margin-top: 20px;
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .custom-carousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000; /* Color of the dots */
+    margin-right: 10px; /* Add spacing between the dots */
+  }
+  
+  .custom-carousel .carousel-indicators li:last-child {
+    margin-right: 0; /* Remove margin from the last dot */
+  }
+  
+  .carousel-inner {
+    display: flex;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto; /* Disable flex grow and shrink, set item to its intrinsic width */
+    width: 1000px; /* Each item takes up 1000px */
+    overflow: hidden; 
+    /* Hide any overflow */
+ 
+  }
+  
+  .carousel-item img {
+    width: 300px; /* Make the images fill the carousel item */
+    height: 500px; /* Maintain aspect ratio */
+  }
+  

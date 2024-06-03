@@ -1,0 +1,61 @@
+.our {
+    width: 1000px;
+    height: 800px;
+    background-color: #fafafa;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .our p {
+    font-size: 16px;
+    color: #ff3147;
+   
+  }
+  
+  .our h3 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 270px;
+    height: 233px;
+    background: #ffffff;
+    box-shadow: 3px 6px 20px #672c2c1f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* .card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  } */
+  
+  .card .number {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card .description {
+    font-size: 16px;
+    color: #333;
+  }
+  .cardimg{
+    width: 39px;
+height: 34px;
+  }
+  .card :hover{
+    background-color: white;
+  }

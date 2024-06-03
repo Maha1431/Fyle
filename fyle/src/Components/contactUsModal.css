@@ -1,0 +1,9 @@
+.form-control{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0; /* Remove border radius if needed */
+}
+.formName{
+  display: flex;
+}
