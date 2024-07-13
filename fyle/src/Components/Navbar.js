@@ -17,8 +17,9 @@ function Navbar() {
   };
 
   const handleContactUs = () => {
-    // Navigate to the ContactUsModal component
-    navigate("/contact-us");
+    // // Navigate to the ContactUsModal component
+    // navigate("/contact-us");
+    setShowModal(true); // Open the modal
   };
 
   return (

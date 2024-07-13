@@ -5,6 +5,7 @@ import ContactUsModal from "./Components/ContctUsModel";
 import WhatWeDo from "./Components/whatwedo";
 import Best from "./Components/best";
 import Ourproject from "./Components/Ourproject";
+import Client from "./Components/clients";
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <WhatWeDo />
       <Best/>
       <Ourproject/>
+      <Client />
     </Router>
   );
 }

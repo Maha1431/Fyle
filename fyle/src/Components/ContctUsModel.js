@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import $ from "jquery";
+import axios from "axios";
 import "./contactUsModal.css"; // Import CSS for styling
 
 function ContactUsModal({ handleClose }) {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     agree: false, // State for checkbox
   });
@@ -16,18 +17,18 @@ function ContactUsModal({ handleClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    $.ajax({
-      url: "https://getform.io/f/your-getform-endpoint", // Ensure this is your actual endpoint
-      method: "POST",
-      data: formData,
-      success: function (response) {
+    axios
+      .post("https://getform.io/f/bolglqea", formData, {
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
         alert("Form submitted successfully!");
         handleClose(); // Close modal on success
-      },
-      error: function (error) {
+      })
+      .catch(error => {
         alert("There was an error submitting the form. Please try again.");
-      },
-    });
+        console.log(error);
+      });
   };
 
   return (
@@ -47,42 +48,41 @@ function ContactUsModal({ handleClose }) {
           </div>
           <div className="modal-body">
             <form onSubmit={handleSubmit}>
-         
               <div className="mb-5">
-               
                 <input
                   type="email"
-                  className="form-control "
+                  className="form-control"
                   id="email"
                   name="email"
-                  value=" Work email*"
+                  placeholder="Work email*"
+                  value={formData.email}
                   onChange={handleChange}
                   required
                 />
-                </div>
-                <div className="mb-5 formName">
-  
-  <input
-    type="text"
-    className="form-control "
-    id="firstName"
-    name="firstName"
-    value="FirstName*"
-    onChange={handleChange}
-    required
-  />
-<br/>
-  <input
-    type="text"
-    className="form-control "
-    id="lastName"
-    name="lastName"
-    value="Lastname*"
-    onChange={handleChange}
-    required
-  />
-</div>
-
+              </div>
+              <div className="mb-5 formName">
+                <input
+                  type="text"
+                  className="form-control"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First Name*"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                />
+                <br />
+                <input
+                  type="text"
+                  className="form-control"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last Name*"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
               <div className="form-check mb-3"> {/* Checkboxes are wrapped in a form-check div */}
                 <input
                   className="form-check-input checkbox" // Custom class for border-bottom checkbox

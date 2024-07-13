@@ -35,12 +35,10 @@
   
   .container {
     display: flex;
-    justify-content: space-between; /* Adjust this as needed */
+    justify-content: space-around; /* Adjust this as needed */
     align-items: center; /* Adjust this as needed */
     padding: 20px; /* Add padding for better layout */
     position: relative; /* Ensure elements are positioned correctly */
-    top: 0; /* Remove if unnecessary */
-    left: 0; /* Remove if unnecessary */
   }
   .contents {
     font-size: 1rem; /* Add font size if missing */
@@ -58,7 +56,7 @@
   }
   .bestcontainer{
     width: 1120px;
-height: 4821px;
+height: auto;
 margin-left: 100px;
 text-align: center;
   }
